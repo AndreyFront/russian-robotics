@@ -1,0 +1,15 @@
+.phone {
+
+    &__icon {
+        display: none;
+    }
+
+    &__number {
+        color: $main-color;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $color-3;
+        }
+    }
+}

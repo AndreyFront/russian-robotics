@@ -1,3 +1,52 @@
 .header {
     flex: 0 0 auto;
+    padding: 15px 0;
+
+    .container {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        grid-column-gap: 5px;
+    }
+
+    &__block-btns {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: start;
+        grid-column-gap: 40px;
+    }
+
+    &__btn {
+        display: grid;
+        grid-auto-columns: max-content;
+        grid-auto-flow: column;
+        grid-column-gap: 15px;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+
+        &:hover .header__btn-name {
+            color: $color-3; 
+        }
+    }
+
+    &__btn-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__btn-name {
+        transition: color $transition-time;
+    }
+
+    &__block-links {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        grid-column-gap: 40px;
+    }
 }

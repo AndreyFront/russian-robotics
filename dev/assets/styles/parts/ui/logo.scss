@@ -1,0 +1,19 @@
+.logo {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 238px;
+    height: 60px;
+    transition: opacity $transition-time;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}

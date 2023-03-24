@@ -1,0 +1,39 @@
+.arrow {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #fff;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: #EBECEC;
+    transition:
+        opacity $transition-time,
+        border-color $transition-time;
+
+    &:hover {
+        border-color: #000;
+    }
+
+    &:hover .arrow__icon use {
+        fill: #000;
+    }
+
+    &[disabled] {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+
+        use {
+            fill: #EBECEC;
+            stroke-width: 1.2;
+            transition: fill $transition-time;
+        }
+    }
+}

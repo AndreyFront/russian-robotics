@@ -33,29 +33,10 @@
         font-size: 20px;
         border-bottom: 1px solid;
         border-bottom-color: transparent;
-        padding-left: 35px;
-        transition: border-bottom $transition-time;
+        transition: border-bottom $transition-time, color $transition-time;
 
         &:hover {
-            border-bottom-color: #194fec;
-        }
-
-        &.desktop {
-            &::before {
-                content: '✔';
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-        }
-
-        &.mobile {
-            &::after {
-                content: '✔';
-                position: absolute;
-                left: 10px;
-                top: 0;
-            }
+            border-bottom-color: $color-3;
         }
     }
 
