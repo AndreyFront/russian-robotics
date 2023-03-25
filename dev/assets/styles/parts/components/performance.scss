@@ -6,14 +6,20 @@
         align-items: end;
     }
 
-    &__block-info {
+    .btn {
+        margin-top: 25px;
+    }
+
+    &__block-info {}
+
+    &__block-head {
         display: grid;
+        grid-row-gap: 15px;
         align-content: start;
     }
 
     &__subtitle {
-        margin-top: 15px;
-        @include adaptiv-font(20, 14);
+        font-size: 20px;
         line-height: 1.3em;
     }
 

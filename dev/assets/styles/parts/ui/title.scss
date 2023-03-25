@@ -3,11 +3,8 @@
     font-weight: 600;
     text-transform: uppercase;
 
-    &--h1 {
-        @include adaptiv-font(46, 20);
-    }
-
+    &--h1,
     &--h2 {
-        @include adaptiv-font(46, 20);
+        font-size: 46px;
     }
 }

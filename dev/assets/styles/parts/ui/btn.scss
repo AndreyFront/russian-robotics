@@ -1,0 +1,54 @@
+.btn {
+    position: relative;
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 8px;
+    width: max-content;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: transparent;
+    border-radius: 72px;
+    transition: background-color $transition-time, border-color $transition-time;
+
+    &[disabled] {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &__text {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.3em;
+        transition: color $transition-time;
+    }
+
+    &--size--bg {
+        width: 270px;
+        padding: 0.7em 1.2em;
+    }
+
+    &--theme--primary {
+        background-color: $color-2;
+
+        &:hover {
+            background-color: $color-7;
+        }
+
+        &.active {
+            background-color: $color-7;
+        }
+
+        .btn {
+            &__text {
+                color: $color-1;
+            }
+        }
+    }
+}
