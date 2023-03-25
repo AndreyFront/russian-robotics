@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
     { src, dest, parallel, series, watch } = require('gulp'),
     del = require('del'),
+    webpack = require('webpack-stream'),
     concat = require('gulp-concat'),
     gulpif = require('gulp-if'),
     rename = require('gulp-rename'),
@@ -39,8 +40,38 @@ const pathDist = {
 
 const isProd = false
 
+// gulp.task('scripts', () => {
+//     return src([`${pathSrc.scripts}main.js`], { sourcemaps: true })
+//         .pipe(gulpif(isProd, uglify().on('error', notify.onError())))
+//         .pipe(dest(`${pathDist.scripts}`, { sourcemaps: true }))
+//         .pipe(browserSync.stream());
+// })
+
 gulp.task('scripts', () => {
     return src([`${pathSrc.scripts}main.js`], { sourcemaps: true })
+        .pipe(webpack({
+            mode: 'development',
+            entry: {
+                main: `${pathSrc.scripts}main.js`,
+            },
+            output: {
+                filename: '[name].js',
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.m?js$/,
+                        exclude: /(node_modules|bower_components)/,
+                        use: {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: ['@babel/preset-env']
+                            }
+                        }
+                    }
+                ]
+            }
+        }))
         .pipe(gulpif(isProd, uglify().on('error', notify.onError())))
         .pipe(dest(`${pathDist.scripts}`, { sourcemaps: true }))
         .pipe(browserSync.stream());

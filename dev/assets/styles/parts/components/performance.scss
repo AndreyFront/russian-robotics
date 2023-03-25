@@ -1,0 +1,29 @@
+.performance {
+
+    .container {
+        display: grid;
+        grid-template-columns: minmax(250px, 470px) auto;
+        align-items: end;
+    }
+
+    &__block-info {
+        display: grid;
+        align-content: start;
+    }
+
+    &__subtitle {
+        margin-top: 15px;
+        @include adaptiv-font(20, 14);
+        line-height: 1.3em;
+    }
+
+    &__block-nav-slider {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+
+    &__slider {}
+}

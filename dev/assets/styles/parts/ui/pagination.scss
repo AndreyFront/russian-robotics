@@ -1,0 +1,17 @@
+.pagination {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 8px;
+    align-items: center;
+
+    &__count {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    &__points {
+        width: 100px;
+        height: 1px;
+        background-color: $color-8;
+    }
+}
