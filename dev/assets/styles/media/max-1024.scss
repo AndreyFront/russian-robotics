@@ -29,4 +29,112 @@
             font-size: 32px;
         }
     }
+
+    .performance {
+        .container {
+            grid-template-columns: minmax(250px, 338px) 470px;
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+
+        .preview-card {
+
+            &__title {
+                transform: translateY(40px);
+            }
+        }
+
+        &__block-info {
+            &::before {
+                right: -20px;
+            }
+        }
+
+        &__subtitle {
+            font-size: 16px;
+        }
+
+        &__block-head {
+            grid-row-gap: 10px;
+        }
+
+        &__block-nav-slider {
+            margin-top: 70px;
+        }
+
+        &__slider {
+            height: 400px;
+
+            .swiper-slide {
+
+                &.swiper-slide-active {
+                    width: 340px;
+                }
+            }
+        }
+    }
+
+    .box-arrows {
+        .arrow {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .pagination {
+        .swiper-horizontal > .swiper-pagination-bullets, 
+        .swiper-pagination-bullets.swiper-pagination-horizontal, 
+        .swiper-pagination-custom, 
+        .swiper-pagination-fraction {
+            width: 72px;
+        }
+
+        &__count {
+            font-size: 16px;
+        }
+    }
+
+    .btn {
+
+        &--size--bg {
+            width: 208px;
+            height: 50px;
+
+            .btn__text {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .preview-card {
+        width: 302px;
+        height: 350px;
+
+        .link {
+            &__name {
+                font-weight: 400;
+            }
+        }
+
+        &__title {
+            font-size: 16px;
+        }
+
+        &__block-info {
+            grid-row-gap: 10px;
+        }
+    }
+
+    .link {
+        &__name {
+            font-size: 16px;
+        }
+
+        &__icon {
+            width: 30px;
+            height: 30px;
+        }
+    }
 }

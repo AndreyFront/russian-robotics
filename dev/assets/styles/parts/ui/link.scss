@@ -1,0 +1,76 @@
+.link {
+    display: grid;
+    grid-template-columns: auto max-content;
+    align-items: center;
+    grid-column-gap: 5px;
+    text-decoration: none;
+    width: max-content;
+
+    &:hover &__name {
+        border-bottom-color: $main-color; 
+    }
+
+    &:hover &__icon {
+        transform: rotate(-45deg);
+    }
+
+    &--theme--primary {
+
+        &:hover .link__name {
+            border-bottom-color: $color-1; 
+        }
+
+        .link {
+
+            &__name {
+                color: $color-1;
+            }
+
+            &__icon {
+
+                use {
+                    stroke: $color-1;
+                }
+            }
+        }
+    }
+
+    &--theme--secondary {
+        &:hover .link__name {
+            border-bottom-color: $color-2; 
+        }
+
+        .link {
+
+            &__name {
+                color: $color-2;
+            }
+
+            &__icon {
+
+                use {
+                    stroke: $color-2;
+                }
+            }
+        }
+    }
+
+    &__name {
+        color: $main-color;
+        font-size: 20px;
+        border-bottom: 1px solid;
+        border-bottom-color: transparent; 
+        transition: border-bottom-color $transition-time;
+    }
+
+    &__icon {
+        width: 50px;
+        height: 50px;
+        transition: transform $transition-time;
+
+        use {
+            stroke: $main-color;
+            stroke-width: 1.5;
+        }
+    }
+}

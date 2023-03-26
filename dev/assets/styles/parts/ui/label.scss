@@ -1,0 +1,13 @@
+.label {
+    padding: 6px 15px;
+    border-radius: 91px;
+    background-color: $color-1;
+
+    &__name {
+        color: $main-color;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1em;
+        text-transform: uppercase;
+    }
+}

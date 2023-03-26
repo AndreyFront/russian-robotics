@@ -32,6 +32,9 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.5",
+    "@fullcalendar/daygrid": "^6.1.5",
+    "@fullcalendar/interaction": "^6.1.5",
     "imask": "^6.4.3",
     "normalize.css": "^8.0.1",
     "simplebar": "^6.2.2",

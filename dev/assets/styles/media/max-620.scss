@@ -1,0 +1,155 @@
+@media screen and (max-width: 620px) {
+    .logo {
+        width: 130px;
+        height: 34px;
+
+        &__image {
+            object-position: center left;
+        }
+    }
+
+    .header {
+        padding: 10px 0;
+
+        .container {
+            grid-template-columns: max-content auto max-content;
+            justify-content: inherit;
+            grid-column-gap: 15px;
+        }
+
+        .logo {
+            order: 1;
+        }
+
+        &__block-links {
+            order: 2;
+            justify-content: end;
+        }
+
+        &__block-btns {
+            order: 3;
+            grid-column-gap: 15px;
+            
+            .header__btn {
+                &:last-child {
+                    order: 1;
+                }
+
+                &:first-child {
+                    order: 2;
+                }
+            }
+        }
+    }
+
+    .phone {
+        &__icon {
+            display: block;
+            width: 24px;
+            height: 24px;
+        }
+
+        &__number {
+            display: none;
+        }
+    }
+
+    .title {
+    
+        &--h1,
+        &--h2 {
+            font-size: 20px;
+        }
+    }
+
+    .performance {
+
+        .container {
+            grid-template-columns: minmax(100px, 1fr);
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: 0;
+        }
+
+
+        .preview-card {
+
+            &__title {
+                transform: translateY(35px);
+            }
+        }
+
+        &__slider {
+            order: 1;
+        }
+
+        &__block-info {
+            order: 2;
+            margin-top: 20px;
+        }
+
+        &__subtitle,
+        .title {
+            display: none;
+        }
+
+        &__block-nav-slider {
+            order: 1;
+            margin-top: 0;
+        }
+
+        &__block-head {
+            order: 2;
+            margin-top: 30px;
+        }
+
+        &__slider {
+            height: 300px;
+
+            .swiper-slide {
+                width: 100%;
+
+                &.swiper-slide-active {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .preview-card {
+        padding: 30px 20px;
+
+        &__title {
+            font-size: 16px;
+        }
+
+        .link {
+    
+            &__icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .box-arrows {
+        .arrow {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .link {
+
+        &__name {
+            font-size: 14px;
+        }
+
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

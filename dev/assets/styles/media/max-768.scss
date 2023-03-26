@@ -24,4 +24,63 @@
             font-size: 24px;
         }
     }
+
+    .performance {
+        .container {
+            grid-template-columns: 250px 300px;
+        }
+
+        .btn {
+            margin-top: 18px;
+        }
+
+        .preview-card {
+
+            &__title {
+                transform: translateY(45px);
+            }
+        }
+
+        &__block-nav-slider {
+            margin-top: 38px;
+        }
+
+        &__slider {
+            height: 320px;
+
+            .swiper-slide {
+
+                &.swiper-slide-active {
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+    .preview-card {
+        width: 240px;
+        height: 270px;
+        border-radius: 15px;
+
+        &__title {
+            font-size: 14px;
+        }
+
+        &__block-info {
+            grid-row-gap: 15px;
+        }
+    }
+
+    .btn {
+
+        &--size--bg {
+            width: 172px;
+            height: 40px;
+            padding: 5px 30px;
+
+            .btn__text {
+                font-size: 14px;
+            }
+        }
+    }
 }

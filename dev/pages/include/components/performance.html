@@ -6,21 +6,21 @@
                 <span class="performance__subtitle">Комплексная поддержка предпринимателей Краснодарского края</span>
                 <button type="button" class="btn btn--size--bg btn--theme--primary">
                     <span class="btn__text">Оставить заявку</span>
-                </button>   
+                </button>
             </div>
             <div class="performance__block-nav-slider">
                 <div class="pagination" data-pagination="main">
-                    <span class="pagination__count" data-pagination="count-start">01</span>
+                    <span class="pagination__count" data-pagination="count-start"></span>
                     <div class="pagination__points" data-pagination="points"></div>
-                    <span class="pagination__count" data-pagination="count-finish">07</span>
+                    <span class="pagination__count" data-pagination="count-finish"></span>
                 </div>
-                <div class="box-arrows" data-box-arrows="main">
-                    <button type="button" class="arrow" data-box-arrows="btn-prev">
+                <div class="box-arrows">
+                    <button type="button" class="arrow" data-arrow="btn-prev">
                         <svg class="arrow__icon">
                             <use xlink:href="./assets/icons/sprite-svg.svg#arrow-left"/>
                         </svg>
                     </button>
-                    <button type="button" class="arrow" data-box-arrows="btn-next">
+                    <button type="button" class="arrow" data-arrow="btn-next">
                         <svg class="arrow__icon">
                             <use xlink:href="./assets/icons/sprite-svg.svg#arrow-right"/>
                         </svg>
@@ -31,22 +31,109 @@
         <div class="swiper performance__slider" data-performance="slider">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    @include('./preview-card.html')
+                    <a href="#" class="preview-card">
+                        <img src="./assets/images/image-1.jpg" class="preview-card__image" loading="lazy" alt="">
+                        <div class="preview-card__block-info">
+                            <span class="preview-card__title">Школа молодого предпринимателя — Бизнес молодых</span>
+                            <div class="link link--theme--primary">
+                                <span class="link__name">Подробнее</span>
+                                <svg class="link__icon">
+                                    <use xlink:href="./assets/icons/sprite-svg.svg#arrow-down-right"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </div>
                 <div class="swiper-slide">
-                    @include('./preview-card.html')
+                    <a href="#" class="preview-card">
+                        <img src="./assets/images/image-2.jpg" class="preview-card__image" loading="lazy" alt="">
+                        <div class="preview-card__block-info">
+                            <span class="preview-card__title">Поддержка самозанятых</span>
+                            <div class="link link--theme--primary">
+                                <span class="link__name">Подробнее</span>
+                                <svg class="link__icon">
+                                    <use xlink:href="./assets/icons/sprite-svg.svg#arrow-down-right"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </div>
                 <div class="swiper-slide">
-                    @include('./preview-card.html')
+                    <a href="#" class="preview-card">
+                        <img src="./assets/images/image-3.jpg" class="preview-card__image" loading="lazy" alt="">
+                        <div class="preview-card__block-info">
+                            <span class="preview-card__title">Центр поддержки предпринимательства</span>
+                            <div class="link link--theme--primary">
+                                <span class="link__name">Подробнее</span>
+                                <svg class="link__icon">
+                                    <use xlink:href="./assets/icons/sprite-svg.svg#arrow-down-right"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </div>
                 <div class="swiper-slide">
-                    @include('./preview-card.html')
+                    <a href="#" class="preview-card">
+                        <img src="./assets/images/image-4.jpg" class="preview-card__image" loading="lazy" alt="">
+                        <div class="preview-card__block-info">
+                            <span class="preview-card__title">Центр сопровождения инвестиционных проектов</span>
+                            <div class="link link--theme--primary">
+                                <span class="link__name">Подробнее</span>
+                                <svg class="link__icon">
+                                    <use xlink:href="./assets/icons/sprite-svg.svg#arrow-down-right"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </div>
                 <div class="swiper-slide">
-                    @include('./preview-card.html')
+                    <a href="#" class="preview-card">
+                        <img src="./assets/images/image-5.jpg" class="preview-card__image" loading="lazy" alt="">
+                        <div class="preview-card__block-info">
+                            <span class="preview-card__title">Патентная система налогообложения</span>
+                            <div class="link link--theme--primary">
+                                <span class="link__name">Подробнее</span>
+                                <svg class="link__icon">
+                                    <use xlink:href="./assets/icons/sprite-svg.svg#arrow-down-right"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </div>
                 <div class="swiper-slide">
-                    @include('./preview-card.html')
+                    <a href="#" class="preview-card">
+                        <img src="./assets/images/image-6.jpg" class="preview-card__image" loading="lazy" alt="">
+                        <div class="preview-card__block-info">
+                            <span class="preview-card__title">Легкий старт с государственной гарантийной поддержкой</span>
+                            <div class="link link--theme--primary">
+                                <span class="link__name">Подробнее</span>
+                                <svg class="link__icon">
+                                    <use xlink:href="./assets/icons/sprite-svg.svg#arrow-down-right"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="preview-card">
+                        <img src="./assets/images/image-7.jpg" class="preview-card__image" loading="lazy" alt="">
+                        <div class="preview-card__block-info">
+                            <span class="preview-card__title">Поддержка IT отрасли</span>
+                            <div class="link link--theme--primary">
+                                <span class="link__name">Подробнее</span>
+                                <svg class="link__icon">
+                                    <use xlink:href="./assets/icons/sprite-svg.svg#arrow-down-right"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </div>
             </div>
         </div>

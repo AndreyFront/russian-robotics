@@ -1,4 +1,4 @@
-export default function pagination(mainBlock, countStartValue, countFinishValue) {
+export default function pagination(mainBlock) {
     const main = mainBlock.querySelector('[data-pagination="main"]')
 
     if (!main) return
@@ -15,12 +15,17 @@ export default function pagination(mainBlock, countStartValue, countFinishValue)
         }
     }
 
-    // Добавить функию изменения каунтов
+    const setCountStart = (value) => {
+        countStart.textContent = valueConversion(value)
+    }
 
-    countStart.textContent = valueConversion(countStartValue)
-    countFinish.textContent = valueConversion(countFinishValue)
+    const setCountFinish = (value) => {
+        countFinish.textContent = valueConversion(value)
+    }
 
     return {
-        points
+        points,
+        setCountStart,
+        setCountFinish
     }
 }
