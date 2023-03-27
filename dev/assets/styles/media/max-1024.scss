@@ -67,12 +67,12 @@
         &__slider {
             height: 400px;
 
-            .swiper-slide {
+            // .swiper-slide {
 
-                &.swiper-slide-active {
-                    width: 340px;
-                }
-            }
+            //     &.swiper-slide-active {
+            //         width: 340px;
+            //     }
+            // }
         }
     }
 
@@ -135,6 +135,77 @@
         &__icon {
             width: 30px;
             height: 30px;
+        }
+    }
+
+    .section {
+        padding-top: 80px;
+
+        &__title,
+        &__title.title {
+            margin-bottom: 40px;
+        }
+    }
+
+    .event-poster {
+        &__content {
+            grid-template-columns: 287px minmax(100px, auto);
+            grid-column-gap: 20px;
+            height: 340px;
+        }
+    }
+
+    .calendar {
+        padding: 30px 20px 24px 20px;
+
+        &__month-name,
+        &__year-name {
+            font-size: 20px;
+        }
+
+        &__weekdays {
+            margin: 20px 0 0 0;
+            grid-template-columns: repeat(7, 24px);
+            grid-column-gap: 10px;
+
+            li {
+                font-size: 16px;
+            }
+        }
+
+        &__days {
+            grid-column-gap: 10px;
+            justify-content: space-between;
+            grid-row-gap: 7px;
+            margin: 7px 0 0 0;
+            grid-template-columns: repeat(7, 28px);
+        }
+
+        &__date {
+            font-size: 16px;
+            height: 28px;
+        }
+    }
+
+    .events {
+
+        .link {
+
+            &__name {
+                font-weight: 400;
+            }
+        }
+
+        &__date {
+            font-size: 32px;
+        }
+
+        &__event {
+            padding: 40px 50px;
+        }
+
+        &__name {
+            font-size: 20px;
         }
     }
 }

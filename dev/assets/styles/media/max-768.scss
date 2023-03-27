@@ -48,12 +48,12 @@
         &__slider {
             height: 320px;
 
-            .swiper-slide {
+            // .swiper-slide {
 
-                &.swiper-slide-active {
-                    width: 300px;
-                }
-            }
+            //     &.swiper-slide-active {
+            //         width: 300px;
+            //     }
+            // }
         }
     }
 
@@ -81,6 +81,83 @@
             .btn__text {
                 font-size: 14px;
             }
+        }
+    }
+
+    .event-poster {
+        &__content {
+            grid-template-columns: 270px minmax(100px, auto);
+            grid-column-gap: 30px;
+            height: 302px;
+        }
+    }
+
+    .page {
+        padding-bottom: 80px;
+    }
+
+    .events {
+
+        .link {
+            display: none;
+        }
+
+        .arrow {
+            width: 20px;
+            height: 20px;
+        }
+
+        &__event {
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        &__date {
+            font-size: 24px;
+        }
+
+        &__name {
+            font-size: 14px;
+            line-height: 1.35em;
+        }
+    }
+
+    .calendar {
+        padding: 20px;
+        border-radius: 15px;
+
+        .arrow {
+            width: 30px;
+            height: 30px;
+        }
+
+        &__month-name,
+        &__year-name {
+            font-size: 14px;
+        }
+
+        &__days {
+            grid-template-columns: repeat(7, 24px);
+        }
+
+        &__date {
+            font-size: 14px;
+            height: 24px;
+        }
+    }
+
+    .label {
+        &__name {
+            font-size: 14px;
+        }
+    }
+
+    .section {
+        padding-top: 60px;
+
+        &__title,
+        &__title.title {
+            margin-bottom: 30px;
         }
     }
 }

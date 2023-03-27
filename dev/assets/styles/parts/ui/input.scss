@@ -1,0 +1,93 @@
+.input {
+    transition: padding-bottom $transition-time;
+
+    &--error {
+        .input {
+            &__input {
+                border-bottom-color: $color-10;
+                color: $color-10;
+
+                &::placeholder {
+                    color: $color-10;
+                }
+            }
+
+            &__message {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+                color: $color-10;
+            }
+        }
+    }
+
+    &--error-effect {
+        .input {
+            &__message {
+                animation: errorEffect 0.3s linear forwards;
+            }
+        }
+
+        @keyframes errorEffect {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(-7px, 0);
+            }
+            50% {
+                transform: translate(0, -0);
+            }
+            75% {
+                transform: translate(7px, 0);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    &--message {
+        .input {
+            &__message {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    &__input {
+        width: 100%;
+        height: 30px;
+        font-size: 16px;
+        font-weight: 400;
+        overflow: hidden;
+        outline: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid;
+        border-bottom-color: $color-6;
+        padding: 0 15px 10px 15px;
+        transition: border-color $transition-time, color $transition-time;
+
+        &::placeholder {
+            color: $color-6;
+            transition: color $transition-time;
+        }
+    }
+
+    &__message {
+        position: absolute;
+        padding: 5px 15px 0 15px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, -7px);
+        transition: 
+            color $transition-time, 
+            transform $transition-time,
+            visibility $transition-time,
+            opacity $transition-time;
+    }
+}

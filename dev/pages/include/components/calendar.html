@@ -1,3 +1,31 @@
 <div class="calendar" data-calendar="main">
-
+    <div class="calendar__month">
+        <button type="button" class="arrow" data-calendar="btn-prev">
+            <svg class="arrow__icon">
+                <use xlink:href="./assets/icons/sprite-svg.svg#arrow-left"/>
+            </svg>
+        </button>
+        <span class="calendar__month-name" data-calendar="month-name">Январь</span>
+        <span class="calendar__year-name" data-calendar="year-name">2023</span>
+        <button type="button" class="arrow" data-calendar="btn-next">
+            <svg class="arrow__icon">
+                <use xlink:href="./assets/icons/sprite-svg.svg#arrow-right"/>
+            </svg>
+        </button>
+    </div>
+    <ul class="calendar__weekdays" data-calendar="weekdays">
+        <li>пн</li>
+        <li>вт</li>
+        <li>ср</li>
+        <li>чт</li>
+        <li>пт</li>
+        <li>сб</li>
+        <li>вс</li>
+    </ul>
+    <ul class="calendar__days" data-calendar="days">
+        <li class="calendar__date">1</li>
+        <li class="calendar__date calendar__date--active">2</li>
+        <li>...</li>
+        <li class="calendar__date calendar__date--event">31</li>
+    </ul>
 </div>

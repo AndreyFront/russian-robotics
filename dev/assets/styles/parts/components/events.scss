@@ -1,10 +1,13 @@
 .events {
 
-    &__slider {}
+    &__slider {
+        height: 100%;
+    }
 
     &__event {
         display: grid;
-        align-content: start;
+        align-content: space-between;
+        height: 100%;
         padding: 40px 60px;
         border-radius: 20px;
         background-color: $color-4;
@@ -55,7 +58,6 @@
         line-height: 1.25em;
         letter-spacing: 0.02em;
         text-transform: uppercase;
-        margin-top: 65px;
     }
 
     &__block-info {
@@ -64,6 +66,5 @@
         align-items: end;
         justify-content: space-between;
         grid-column-gap: 20px;
-        margin-top: 42px;
     }
 }

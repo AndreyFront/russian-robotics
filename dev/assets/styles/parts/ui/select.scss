@@ -1,0 +1,74 @@
+.select {
+    position: relative;
+
+    &.active {
+        .select {
+            &__block-title {
+                background-color: $color-1;
+                border-color: $main-color;
+            }
+
+            &__icon {
+                transform: rotate(-180deg);
+            }
+
+            &__list {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__block-title,
+    &__li {
+        padding: 14px 18px;
+        text-transform: uppercase;
+    }
+
+    &__block-title {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color-2;
+        cursor: pointer;
+        border: 1px solid;
+        border-color: transparent;
+        transition: background-color $transition-time, border-color $transition-time;
+    }
+
+    &__title {}
+
+    &__icon {
+        width: 10px;
+        height: 17px;
+        transition: transform $transition-time;
+    }
+
+    &__list {
+        position: absolute;
+        z-index: 10;
+        top: 100%;
+        width: 100%;
+        transform: translateY(10px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: transform $transition-time, opacity $transition-time, visibility $transition-time;
+    }
+
+    &__li {
+        background-color: $color-1;
+        border-right: 1px solid $main-color;
+        border-left: 1px solid $main-color;
+        border-bottom: 1px solid $main-color;
+        cursor: pointer;
+        transition: background-color $transition-time;
+
+        &:hover {
+            background-color: $color-2;
+        }
+    }
+}

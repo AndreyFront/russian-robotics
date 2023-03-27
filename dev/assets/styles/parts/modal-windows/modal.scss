@@ -1,0 +1,53 @@
+.modal {
+
+    &__close-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    &__subtitle {
+        display: block;
+        margin: 20px auto 0 auto;
+        @include adaptiv-font(20, 14);
+    }
+    
+    &__title {
+        font-weight: 600;
+        @include adaptiv-font(24, 16);
+        text-transform: uppercase;
+    }
+
+    &.hystmodal {
+        .hystmodal {
+
+            &__wrap {
+                padding: 0 20px;
+            }
+
+            &__window {
+                padding: 60px 30px;
+                background: $color-1;
+                width: 100%;
+                max-width: 608px;
+            }
+
+            &__close {
+                top: 20px;
+                right: 20px;
+                width: 32px;
+                height: 32px;
+                padding: 0;
+                background-image: none;
+                transition: opacity 0.3s;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
