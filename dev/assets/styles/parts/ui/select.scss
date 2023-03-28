@@ -1,13 +1,68 @@
 .select {
     position: relative;
+    transition: padding $transition-time;
+
+    &--error {
+        .select {
+            &__block-title {
+                border-bottom-color: $color-10;
+            }
+
+            &__title {
+                color: $color-10;
+            }
+
+            &__icon use {
+                stroke: $color-10;
+            }
+
+            &__message {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+                color: $color-10;
+            }
+        }
+    }
+
+    &--message {
+        .select {
+            &__message {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0, 0);
+            }
+        }
+    }
+    
+    &--error-effect {
+        .select {
+            &__message {
+                animation: errorEffect 0.3s linear forwards;
+            }
+        }
+
+        @keyframes errorEffect {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(-7px, 0);
+            }
+            50% {
+                transform: translate(0, -0);
+            }
+            75% {
+                transform: translate(7px, 0);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    }
 
     &.active {
         .select {
-            &__block-title {
-                background-color: $color-1;
-                border-color: $main-color;
-            }
-
             &__icon {
                 transform: rotate(-180deg);
             }
@@ -21,54 +76,94 @@
         }
     }
 
-    &__block-title,
-    &__li {
-        padding: 14px 18px;
-        text-transform: uppercase;
+    &__message {
+        position: absolute;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 5px 15px 0 15px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, -7px);
+        transition: 
+            color $transition-time, 
+            transform $transition-time,
+            visibility $transition-time,
+            opacity $transition-time;
     }
 
     &__block-title {
         display: grid;
+        padding: 0 10px 20px 15px;
         grid-template-columns: repeat(2, auto);
         align-items: center;
         justify-content: space-between;
-        background-color: $color-2;
+        background-color: $color-1;
         cursor: pointer;
-        border: 1px solid;
-        border-color: transparent;
-        transition: background-color $transition-time, border-color $transition-time;
+        border-bottom: 1px solid;
+        border-bottom-color: $color-6;
+        transition: border-bottom-color $transition-time;
     }
 
-    &__title {}
+    &__title {
+        color: $color-6;
+        font-weight: 400;
+        transition: color $transition-time;
+    }
 
     &__icon {
-        width: 10px;
-        height: 17px;
+        width: 24px;
+        height: 24px;
         transition: transform $transition-time;
+
+        use {
+            stroke: $main-color;
+            stroke-width: 1.5;
+            transition: stroke $transition-time;
+        }
     }
 
     &__list {
         position: absolute;
         z-index: 10;
         top: 100%;
+        display: grid;
+        grid-row-gap: 16px;
         width: 100%;
+        max-height: 172px;
+        overflow-y: auto;
         transform: translateY(10px);
+        padding: 20px;
+        background-color: $color-1;
+        border: 1px solid $color-5;
+        box-shadow: 0px 2px 8px rgba(47, 50, 85, 0.04), 0px 16px 24px rgba(47, 50, 85, 0.08);
+        border-radius: 5px;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
         transition: transform $transition-time, opacity $transition-time, visibility $transition-time;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: $color-8;
+            border-radius: 9px;
+        }
     }
 
     &__li {
-        background-color: $color-1;
-        border-right: 1px solid $main-color;
-        border-left: 1px solid $main-color;
-        border-bottom: 1px solid $main-color;
+        display: grid;
+        font-weight: 400;
         cursor: pointer;
-        transition: background-color $transition-time;
+        transition: opacity $transition-time;
 
         &:hover {
-            background-color: $color-2;
+            opacity: 0.6;
         }
     }
 }

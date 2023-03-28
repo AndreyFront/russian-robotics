@@ -13,20 +13,13 @@
     }
 
     &:not([disabled]):hover>&__label &__text {
-        color: #000;
+        color: $color-9;
         cursor: pointer;
     }
 
-    &.active {
-        .checkbox {
-            &__decore::before {
-                background-color: #DE4F22;
-                border-color: #DE4F22;
-            }
-
-            &__decore::after {
-                opacity: 1;
-            }
+    &--error {
+        .checkbox__decore::before {
+            border-color: $color-10;
         }
     }
 
