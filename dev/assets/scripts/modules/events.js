@@ -11,11 +11,11 @@ export default function events(mainBlock, params = {}) {
     const swiper = new Swiper(slider, {
         spaceBetween: 20,
         speed: 500,
-        // autoplay: {
-        //     delay: 3000,
-        //     disableOnInteraction: false,
-        //     pauseOnMouseEnter: true,
-        // },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
         navigation: {
             nextEl: btnNext,
             prevEl: btnPrev,
